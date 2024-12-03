@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Blooming Rose</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: 
+    }
+
+    .rose {
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
+
+    .petal {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-col
+      border-radius: 50%;
+      opacity: 0;
+      transform: scale(0);
+      animation: bloom 3s ease-in-out forwards;
+    }
+
+    .petal1 {
+      top: 10px;
+      left: 50px;
+      animation-delay: 0.5s;
+    }
+
+    .petal2 {
+      top: 50px;
+      left: 10px;
+      animation-delay: 1s;
+    }
+
+    .petal3 {
+      top: 50px;
+      left: 90px;
+      animation-delay: 1.5s;
+    }
+
+    .petal4 {
+      top: 90px;
+      left: 50px;
+      animation-delay: 2s;
+    }
+
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: 
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @keyframes bloom {
+      0% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="rose">
+    <div class="petal petal1"></div>
+    <div class="petal petal2"></div>
+    <div class="petal petal3"></div>
+    <div class="petal petal4"></div>
+    <div class="center"></div>
+  </div>
+</body>
+</html>
